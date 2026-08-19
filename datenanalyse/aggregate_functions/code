@@ -1,0 +1,22 @@
+import pandas as pd 
+
+# Define the DataFrame to work with as a dictionary
+cars_data = {'model': ['audi A1', 'audi A6', 'audi A4', 'audi A3','audi A1'],
+          'year': [2017, 2016, 2017, 2019, 2016],
+          'fueltype': ['petrol', 'diesel', 'diesel', 'petrol', 'petrol'],
+          'price': [12500, 16500, 16800, 17300, 16500]}
+
+# Create a DataFrame from the dictionary
+audi_cars = pd.DataFrame(cars_data)
+
+# Define the highest prices
+highest_price = audi_cars['price'].max()
+
+# Define the lowest prices
+lowest_price = audi_cars['price'].min()
+
+# Define the average prices
+average_price = audi_cars['price'].mean()
+
+# Testing the result
+print(f'Highest price: {highest_price}, lowest price: {lowest_price}, average price: {average_price}')
