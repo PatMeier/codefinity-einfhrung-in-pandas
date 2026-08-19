@@ -1,0 +1,26 @@
+import pandas as pd 
+
+# Definition of the table in form of a dictionary
+cars_data = {'model': [None, 'audi A6', 'audi A4', None,'audi A1'],
+'year': [2017, 2016, 2017, None, 2016],
+'fueltype': [None, 'diesel', 'diesel', 'petrol', 'petrol'],
+'price': [12500, 16500, 16800, 17300, 16500]}
+
+# Transformation of the dictionary into a DataFrame
+audi_cars = pd.DataFrame(cars_data)
+
+# Count all values except for None or NaN
+number_of_cells = audi_cars.count()
+
+# Compute the total prices of all cars
+total_price = audi_cars['price'].sum()
+
+# Count all None or NaN values in the DataFrame
+null_count = audi_cars.isna().sum()
+
+# Testing the result
+print('Missing values:')
+print(null_count)
+print('Number of non-null cells:')
+print(number_of_cells)
+print(f'Total price: {total_price}')
