@@ -1,0 +1,10 @@
+import pandas as pd
+
+# Define the path to the raw CSV in a variable
+wine_data = pd.read_csv('https://codefinity-content-media.s3.eu-west-1.amazonaws.com/a43d24b6-df61-4e11-9c90-5b36552b3437/wine.csv')
+
+# Define information about the input data in a variable
+information = wine_data.info()
+
+# Testing the result
+print(information)
