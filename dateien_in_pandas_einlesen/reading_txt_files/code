@@ -1,0 +1,14 @@
+# Importing pandas library
+import pandas as pd
+
+# Define the path to the raw input file in a variable
+file_url = 'https://codefinity-content-media.s3.eu-west-1.amazonaws.com/a43d24b6-df61-4e11-9c90-5b36552b3437/pandas.txt'
+
+# Reading a text file into a DataFrame
+text_data = pd.read_csv(file_url, sep='\r', header=None)
+
+# Extract the first row of the txt file
+first_row = text_data.iloc[0]
+
+# Testing the result
+print(first_row)
