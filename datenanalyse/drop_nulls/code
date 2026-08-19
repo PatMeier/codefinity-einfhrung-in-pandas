@@ -1,0 +1,16 @@
+import pandas as pd
+
+# Define the path to the raw CSV in a variable
+wine_data = pd.read_csv('https://codefinity-content-media.s3.eu-west-1.amazonaws.com/a43d24b6-df61-4e11-9c90-5b36552b3437/wine_with_nan.csv')
+
+# Define the lnegth of the DataFrame
+length_before = len(wine_data)
+
+# Remove all None values from the input dataset
+wine_data = wine_data.dropna()
+
+# Define the length of the new DataFrame
+length_after = len(wine_data)
+
+# Testing the result
+print(length_before - length_after)
