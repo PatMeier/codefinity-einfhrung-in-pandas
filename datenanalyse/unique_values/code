@@ -1,0 +1,24 @@
+import pandas as pd
+
+# Definition of the table in form of a dictionary
+cars_data = {'model': ['audi A1', 'audi A6', 'audi A4', 'audi A3','audi A1'],
+          'year': [2017, 2016, 2017, 2019, 2016],
+          'fueltype': ['petrol', 'diesel', 'diesel', 'petrol', 'petrol'],
+          'capital': ['Manila', 'Monaco', 'Bangkok', 'Stockhol', 'Valletta']}
+
+# Transformation of the dictionary into a DataFrame
+audi_cars = pd.DataFrame(cars_data)
+
+# Compute all unique values for the 'year'
+unique_years = audi_cars['year'].unique()
+
+# Compute all unique values for the 'fueltype'
+unique_fueltype = audi_cars['fueltype'].unique()
+
+# Count the number of unique 'fueltypes'
+count_unique_fueltypes = audi_cars['fueltype'].nunique()
+
+# Testing the result
+print(unique_years)
+print(unique_fueltype)
+print(count_unique_fueltypes)
